@@ -44,8 +44,8 @@
         font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:16.5px;
     letter-spacing:-.005em; color:#FFFFFF;
     }
-  .nav .links{display:flex; gap:22px; font-size:13px; letter-spacing:.01em;}
-  .nav .links a{color:#B9D3C5; text-decoration:none;}
+  .nav .links{display:flex; gap:22px; font-size:15px; font-weight:600; letter-spacing:.01em;}
+    .nav .links a{color:#B9D3C5; text-decoration:none;}
       .nav .links a[aria-current]{color:#FFFFFF;}
     .nav .links a:hover{color:#FFFFFF;}
       .nav a:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
@@ -66,8 +66,9 @@
     font-weight:600; font-size:clamp(38px,7vw,68px); line-height:1.0;
     letter-spacing:-.025em; margin:0; color:#FFFFFF; text-wrap:balance;
     }
-  .hero .rule{width:64px; height:3px; background:var(--amber); border-radius:2px;}
-  .hero p{margin:0; font-size:17.5px; line-height:1.55; max-width:50ch; color:#C6DCD0; text-wrap:pretty;}
+  .hero .title-wrap{display:inline-flex; flex-direction:column; align-items:stretch; gap:22px;}
+      .hero .rule{width:100%; height:3px; background:var(--amber); border-radius:2px;}
+    .hero p{margin:0; font-size:17.5px; line-height:1.55; max-width:50ch; color:#C6DCD0; text-wrap:pretty;}
 
   .band{padding:66px 28px;}
   .band.paper{background:var(--paper); color:var(--ink);}
@@ -171,17 +172,18 @@
           </g>
         </svg>
         <div class="inner">
-          <h1>Coppice Studios</h1>
-          <span class="rule"></span>
-          <p>Building high-quality products to solve real world problems.</p>
+                <div class="title-wrap">
+                            <h1>Coppice Studios</h1>
+                            <span class="rule"></span>
+                </div>
         </div>
-      </header>
+                </header>
 
       <section class="band paper">
         <div class="measure">
           <p class="kicker">Who we are</p>
-      <h2>A small studio that ships.</h2>
-          <p class="body">Two passionate and experienced founders who have helped build four unicorns between them, now working together to drive positive change through the products they make.</p>
+      <h2>We build world-class products to solve real-world problems.</h2>
+              <p class="body">We're dedicated to building exceptional products to both solve problems and bring enjoyment to our customers.</p>
         </div>
       </section>
 
