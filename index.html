@@ -1,0 +1,224 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coppice Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root{
+      --sapling:#3E825C;
+    --canopy:#1B5838;
+    --understorey:#0A4026;
+    --sage:#B5CFBE;
+          --pale:#E0ECE4;
+          --paper:#FBFAF7;
+          --stone:#F4F2ED;
+          --lichen:#75847B;
+    --ink:#12211A;
+    --amber:#D89B2E;
+      }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+        background:var(--stone);
+    color:var(--ink);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+}
+  img{max-width:100%;}
+
+  .nav{
+    background:var(--understorey);
+    color:#DCEAE1;
+        display:flex; align-items:center; justify-content:space-between;
+    gap:20px; padding:16px 28px;
+  }
+  .wordmark{display:flex; align-items:center; gap:10px;}
+  .wordmark svg{display:block;}
+  .wordmark span{
+        font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:16.5px;
+    letter-spacing:-.005em; color:#FFFFFF;
+    }
+  .nav .links{display:flex; gap:22px; font-size:13px; letter-spacing:.01em;}
+  .nav .links a{color:#B9D3C5; text-decoration:none;}
+      .nav .links a[aria-current]{color:#FFFFFF;}
+    .nav .links a:hover{color:#FFFFFF;}
+      .nav a:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+
+  .hero{
+        position:relative; overflow:hidden;
+    background:var(--canopy); color:#EAF3EE;
+        padding:86px 28px 82px;
+  }
+  .hero .shoots{position:absolute; inset:0; width:100%; height:100%; pointer-events:none;}
+  .hero .inner{
+    position:relative; max-width:720px; margin-inline:auto;
+    display:flex; flex-direction:column; align-items:center; gap:22px;
+    text-align:center;
+  }
+  .hero h1{
+        font-family:"Fraunces",Georgia,serif;
+    font-weight:600; font-size:clamp(38px,7vw,68px); line-height:1.0;
+    letter-spacing:-.025em; margin:0; color:#FFFFFF; text-wrap:balance;
+    }
+  .hero .rule{width:64px; height:3px; background:var(--amber); border-radius:2px;}
+  .hero p{margin:0; font-size:17.5px; line-height:1.55; max-width:50ch; color:#C6DCD0; text-wrap:pretty;}
+
+  .band{padding:66px 28px;}
+  .band.paper{background:var(--paper); color:var(--ink);}
+  .band.pale{background:var(--pale); color:var(--ink);}
+  .measure{max-width:62ch; margin-inline:auto; text-align:center;}
+  .band .kicker{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--sapling); margin:0 0 14px;
+  }
+  .band h2{
+        font-family:"Fraunces",Georgia,serif; font-weight:600;
+    font-size:clamp(24px,3.6vw,34px); line-height:1.1; letter-spacing:-.018em;
+    margin:0; color:var(--canopy); text-wrap:balance;
+}
+  .band .body{font-size:16.5px; line-height:1.62; margin:18px 0 0; color:#3B4A41; text-wrap:pretty;}
+
+  .points{display:flex; flex-direction:column; gap:0; margin-top:34px; max-width:860px; margin-inline:auto;}
+  .point{
+        display:grid; grid-template-columns:220px 1fr; gap:22px;
+    padding:24px 0; border-top:1px solid var(--sage);
+    align-items:baseline;
+  }
+  .point:last-child{border-bottom:1px solid var(--sage);}
+  .point h3{
+        font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:18px;
+    margin:0; color:var(--canopy);
+}
+  .point p{margin:0; font-size:14.5px; line-height:1.58; color:#415047; max-width:54ch;}
+
+  .contact{
+        background:var(--sapling); color:#FFFFFF; padding:42px 28px;
+            display:flex; flex-direction:column; align-items:center; gap:12px;
+    text-align:center;
+  }
+  .contact .contact-label{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:#CFE6D9; margin:0;
+    }
+  .contact a.mail{
+    font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:16px;
+    color:#FFFFFF; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.5);
+        padding-bottom:3px;
+    }
+  .contact a.mail:hover{border-bottom-color:#FFFFFF;}
+      .contact a:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+
+  .foot{
+        background:var(--understorey); color:#8FAE9D; padding:26px 28px;
+    display:flex; flex-wrap:wrap; gap:8px 26px; justify-content:space-between;
+    font-size:12px; letter-spacing:.015em;
+  }
+  .foot .legal{display:flex; flex-wrap:wrap; gap:6px 18px;}
+
+  @media (max-width:820px){
+    .point{grid-template-columns:1fr; gap:6px;}
+    .hero{padding:64px 22px 60px;}
+    .band{padding:50px 22px;}
+    .contact{padding:36px 22px;}
+}
+  @media (max-width:520px){
+    .nav{padding:14px 18px;}
+    .nav .links{gap:16px;}
+    .foot{padding:22px 18px;}
+  }
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;}}
+</style>
+    </head>
+    <body>
+
+      <nav class="nav">
+        <span class="wordmark">
+          <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+            <path d="M11 20 V13" stroke="#7FC3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <path d="M11 14 C11 9, 6 8, 5 3" stroke="#D89B2E" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <path d="M11 14 C11 8, 13 6, 12 2" stroke="#7FC3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <path d="M11 14 C11 9, 16 8, 18 4" stroke="#7FC3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span>Coppice Studios</span>
+        </span>
+        <span class="links">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+        </span>
+      </nav>
+
+      <header class="hero">
+        <svg class="shoots" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <g fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1.5" stroke-linecap="round">
+            <path d="M170 470 C170 330, 68 300, 38 170"/>
+            <path d="M170 470 C170 340, 92 292, 80 132"/>
+            <path d="M170 470 C170 350, 128 286, 132 108"/>
+            <path d="M170 470 C170 350, 212 286, 234 116"/>
+            <path d="M170 470 C170 340, 250 294, 286 146"/>
+            <path d="M1030 470 C1030 330, 928 300, 898 176"/>
+            <path d="M1030 470 C1030 345, 968 288, 962 122"/>
+            <path d="M1030 470 C1030 350, 1030 280, 1042 100"/>
+            <path d="M1030 470 C1030 345, 1092 288, 1116 132"/>
+            <path d="M1030 470 C1030 330, 1138 306, 1190 190"/>
+          </g>
+        </svg>
+        <div class="inner">
+          <h1>Coppice Studios</h1>
+          <span class="rule"></span>
+          <p>Building high-quality products to solve real world problems.</p>
+        </div>
+      </header>
+
+      <section class="band paper">
+        <div class="measure">
+          <p class="kicker">Who we are</p>
+      <h2>A small studio that ships.</h2>
+          <p class="body">Two passionate and experienced founders who have helped build four unicorns between them, now working together to drive positive change through the products they make.</p>
+        </div>
+      </section>
+
+      <section class="band pale">
+        <div class="measure">
+          <p class="kicker">How we work</p>
+      <h2>Focused on quality.</h2>
+    </div>
+    <div class="points">
+          <div class="point">
+            <h3>Built in-house</h3>
+            <p>Design, code, art and audio all sit with the two of us. No handoffs, no agencies, nothing lost in translation.</p>
+          </div>
+          <div class="point">
+           <h3>Fast on purpose</h3>
+        <p>Speed of execution is the advantage a two-person studio actually has. We put things in front of real people early and change them quickly.</p>
+          </div>
+          <div class="point">
+            <h3>We build what we own</h3>
+        <p>Our own products, on our own roadmap. That keeps the work honest and the decisions ours.</p>
+      </div>
+    </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <p class="contact-label">Contact</p>
+        <a class="mail" href="mailto:hello@coppicestudios.com">hello@coppicestudios.com</a>
+      </section>
+
+      <footer class="foot">
+        <span>© 2026 Coppice Studios Ltd</span>
+    <span class="legal">
+      <span>Registered in England and Wales</span>
+          <span>Company no. 17376647</span>
+          <span>Unit 5 Avenue Business Park, Brockley Road, Elsworth, Cambridge CB23 4EY</span>
+        </span>
+      </footer>
+
+    </body>
+    </html>
