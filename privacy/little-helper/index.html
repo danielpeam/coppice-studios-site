@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Little Helper App Privacy Statement - Coppice Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+    :root{
+      --sapling:#3E825C;
+    --canopy:#1B5838;
+    --understorey:#0A4026;
+    --sage:#B5CFBE;
+          --pale:#E0ECE4;
+          --paper:#FBFAF7;
+          --stone:#F4F2ED;
+          --lichen:#75847B;
+    --ink:#12211A;
+    --amber:#D89B2E;
+      }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+        background:var(--stone); color:var(--ink);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+  img{max-width:100%;}
+
+  .nav{
+    background:var(--understorey); color:#DCEAE1;
+        display:flex; align-items:center; justify-content:space-between;
+    gap:20px; padding:16px 28px;
+  }
+  .wordmark{display:flex; align-items:center; gap:10px;}
+  .wordmark svg{display:block;}
+  .wordmark span{
+        font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:16.5px;
+    letter-spacing:-.005em; color:#FFFFFF;
+    }
+.nav .links{display:flex; gap:22px; font-size:15px; font-weight:600;}
+    .nav .links a{color:#B9D3C5; text-decoration:none;}
+      .nav .links a[aria-current]{color:#FFFFFF;}
+    .nav .links a:hover{color:#FFFFFF;}
+      .nav a:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+
+  .intro{
+        background:var(--canopy); color:#EAF3EE; padding:64px 28px 60px;
+            text-align:center;
+  }
+  .intro .inner{max-width:660px; margin-inline:auto; display:flex; flex-direction:column; align-items:center; gap:20px;}
+  .intro h1{
+        font-family:"Fraunces",Georgia,serif; font-weight:600;
+    font-size:clamp(30px,5vw,46px); line-height:1.04; letter-spacing:-.022em;
+    margin:0; color:#FFFFFF; text-wrap:balance;
+    }
+  .intro .rule{width:64px; height:3px; background:var(--amber); border-radius:2px;}
+  .intro p{margin:0; font-size:16.5px; line-height:1.6; color:#C6DCD0; text-wrap:pretty;}
+
+  .band{padding:66px 28px;}
+  .band.paper{background:var(--paper);}
+  .band.pale{background:var(--pale);}
+  .measure{max-width:62ch; margin-inline:auto; text-align:center;}
+  .kicker{
+        font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--sapling); margin:0 0 14px;
+}
+  h2{
+        font-family:"Fraunces",Georgia,serif; font-weight:600;
+    font-size:clamp(24px,3.6vw,34px); line-height:1.1; letter-spacing:-.018em;
+    margin:0; color:var(--canopy); text-wrap:balance;
+}
+  .foot{
+        background:var(--understorey); color:#8FAE9D; padding:26px 28px;
+    display:flex; flex-wrap:wrap; gap:8px 26px; justify-content:space-between;
+    font-size:12px;
+  }
+  .foot .legal{display:flex; flex-wrap:wrap; gap:6px 18px;}
+  .foot-col{display:flex; flex-direction:column; gap:6px;}
+  .foot-right{align-items:flex-end; text-align:right;}
+  .foot-label{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#B9D3C5;}
+  .foot a{color:#DCEAE1; text-decoration:none; border-bottom:1px solid rgba(220,234,225,.35); padding-bottom:1px;}
+  .foot a:hover{color:#FFFFFF; border-bottom-color:#FFFFFF;}
+  .foot a:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+  @media (max-width:640px){ .foot-right{align-items:flex-start; text-align:left;} }
+
+  .crumb{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin:0;}
+  .crumb a{color:#B9D3C5; text-decoration:none;}
+  .crumb a:hover{color:#FFFFFF;}
+  .intro .meta{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; letter-spacing:.06em; color:#B9D3C5;}
+  .btn{display:inline-flex; align-items:center; gap:8px; background:var(--amber); color:var(--understorey); font-weight:600; font-size:14.5px; text-decoration:none; padding:11px 20px; border-radius:4px;}
+  .btn:hover{background:#E6AC44;}
+  .btn:focus-visible, .card:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+  .list{max-width:720px; margin-inline:auto; display:flex; flex-direction:column; gap:14px;}
+  .card{display:flex; justify-content:space-between; align-items:center; gap:18px; background:var(--paper); border:1px solid var(--sage); border-radius:4px; padding:22px 24px; text-decoration:none; color:inherit;}
+  .card:hover{border-color:var(--sapling);}
+  .card h3{font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:19px; margin:0 0 4px; color:var(--canopy);}
+  .card p{margin:0; font-size:13.5px; color:#4A5A50;}
+  .card .go{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; color:var(--sapling); white-space:nowrap;}
+  .doc{max-width:68ch; margin-inline:auto; background:var(--paper); border:1px solid var(--sage); border-radius:4px; padding:44px 48px;}
+  .doc h2{font-size:22px; margin:34px 0 10px;}
+  .doc h2:first-child{margin-top:0;}
+  .doc p, .doc li{font-size:15px; line-height:1.65; color:#2E3B33;}
+  .doc p{margin:0 0 12px;}
+  .doc ul{margin:0 0 12px; padding-left:20px;}
+  .doc li{margin-bottom:6px;}
+  .doc a{color:var(--canopy);}
+  .doc .small{font-size:12.5px; color:var(--lichen); border-top:1px solid var(--pale); padding-top:18px; margin-top:34px;}
+  @media (max-width:640px){ .doc{padding:28px 22px;} .card{flex-direction:column; align-items:flex-start;} }
+
+  @media (max-width:520px){ .nav{padding:14px 18px;} .nav .links{gap:16px;} .foot{padding:22px 18px;} .band{padding:44px 16px;} }
+</style>
+</head>
+<body>
+
+    <nav class="nav">
+      <span class="wordmark">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+          <path d="M11 20 V13" stroke="#7FC3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M11 14 C11 9, 6 8, 5 3" stroke="#D89B2E" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M11 14 C11 8, 13 6, 12 2" stroke="#7FC3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M11 14 C11 9, 16 8, 18 4" stroke="#7FC3A0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>Coppice Studios</span>
+      </span>
+      <span class="links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+      </span>
+    </nav>
+
+    <header class="intro">
+      <div class="inner">
+        <p class="crumb"><a href="/privacy/">← Privacy Statements</a></p>
+        <h1>Little Helper App Privacy Statement</h1>
+        <span class="rule"></span>
+        <p class="meta">Coppice Family Studios · Last updated 22 September 2026</p>
+        <a class="btn" href="/privacy/little-helper/little-helper-privacy-statement.pdf" download>Download PDF</a>
+      </div>
+    </header>
+
+    <section class="band pale">
+      <article class="doc">
+        <h2>Who we are</h2>
+        <p>Coppice Studios Ltd, trading as Coppice Family Studios, makes the Little Helper app. Contact us at <a href="mailto:admin@coppicestudios.com">admin@coppicestudios.com</a>.</p>
+
+        <h2>The short version</h2>
+        <p>In the app, your photos, videos, drawings and settings stay on your phone. We never see them. We don't show adverts and we never sell your data.</p>
+
+        <h2>What we receive</h2>
+        <p>Only what's needed to check your subscription. We use a service called RevenueCat to handle this. It receives:</p>
+        <ul>
+          <li>an anonymous ID for your copy of the app (not your name or email)</li>
+          <li>your purchase and subscription status</li>
+          <li>your app store country and basic device details (e.g. phone model, app version)</li>
+        </ul>
+        <p>Payments are handled by Apple or Google. We never see your name, email or card details.</p>
+
+        <h2>What we don't do</h2>
+        <ul>
+          <li>No analytics, crash reporting or advertising tools in the app</li>
+          <li>No accounts or sign-in</li>
+          <li>No location, camera, microphone or contacts access</li>
+          <li>The app only asks for photo access so you can pick what shows in the gallery. Nothing is uploaded.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>Little Helper is for parents and carers. It is set up and controlled by an adult. A child using the app gives us no personal information.</p>
+
+        <h2>Our website</h2>
+        <p>When you use coppicestudios.com, we may collect:</p>
+        <ul>
+          <li>what you send us through our contact form, such as your name, email and message. We use this only to reply to you.</li>
+          <li>cookies and analytics data, such as pages visited and device type, to keep the site working and improve it. Where the law requires it, we'll ask for your consent first. You can also block or delete cookies in your browser settings.</li>
+        </ul>
+
+        <h2>How long we keep it</h2>
+        <p>Subscription records are kept while your subscription is active, then for up to six years for UK tax purposes. Contact form messages are kept only as long as needed to deal with your enquiry. Everything on your device is deleted when you delete the app.</p>
+
+        <h2>Your rights</h2>
+        <p>Under UK data protection law you can ask to see, correct or delete your data. Email <a href="mailto:admin@coppicestudios.com">admin@coppicestudios.com</a>. For app requests, please include your Subscription ID (in the app under Settings → About), as the app holds no name or email to find you by.</p>
+        <p>You can also complain to the Information Commissioner's Office at <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>.</p>
+
+        <h2>Changes</h2>
+        <p>If this statement changes, we'll update this page and the date at the top.</p>
+
+        <p class="small">Coppice Studios Ltd, trading as Coppice Family Studios. Registered in England and Wales, company number 17376647. Registered office: Unit 5 Avenue Business Park, Brockley Road, Elsworth, Cambridge, CB23 4EY, United Kingdom.</p>
+      </article>
+    </section>
+
+    <footer class="foot">
+        <div class="foot-col">
+          <span class="foot-label">Registered details</span>
+          <span>© 2026 Coppice Studios Ltd</span>
+          <span class="legal">
+            <span>Registered in England and Wales</span>
+            <span>Company no. 17376647</span>
+            <span>Unit 5 Avenue Business Park, Brockley Road, Elsworth, Cambridge CB23 4EY</span>
+          </span>
+        </div>
+        <div class="foot-col foot-right">
+          <span class="foot-label">Contact</span>
+          <a href="mailto:hello@coppicestudios.com">hello@coppicestudios.com</a>
+          <a href="/privacy/">Privacy Statement</a>
+        </div>
+      </footer>
+
+</body>
+</html>
