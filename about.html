@@ -133,6 +133,13 @@
     font-size:12px;
   }
   .foot .legal{display:flex; flex-wrap:wrap; gap:6px 18px;}
+  .foot-col{display:flex; flex-direction:column; gap:6px;}
+  .foot-right{align-items:flex-end; text-align:right;}
+  .foot-label{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#B9D3C5;}
+  .foot a{color:#DCEAE1; text-decoration:none; border-bottom:1px solid rgba(220,234,225,.35); padding-bottom:1px;}
+  .foot a:hover{color:#FFFFFF; border-bottom-color:#FFFFFF;}
+  .foot a:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+  @media (max-width:640px){ .foot-right{align-items:flex-start; text-align:left;} }
 
   @media (max-width:760px){
     .founders{grid-template-columns:1fr; gap:36px;}
@@ -228,13 +235,21 @@
     </section>
 
     <footer class="foot">
-      <span>© 2026 Coppice Studios Ltd</span>
-    <span class="legal">
-      <span>Registered in England and Wales</span>
-        <span>Company no. 17376647</span>
-        <span>Unit 5 Avenue Business Park, Brockley Road, Elsworth, Cambridge CB23 4EY</span>
-      </span>
-    </footer>
+        <div class="foot-col">
+          <span class="foot-label">Registered details</span>
+          <span>© 2026 Coppice Studios Ltd</span>
+          <span class="legal">
+            <span>Registered in England and Wales</span>
+            <span>Company no. 17376647</span>
+            <span>Unit 5 Avenue Business Park, Brockley Road, Elsworth, Cambridge CB23 4EY</span>
+          </span>
+        </div>
+        <div class="foot-col foot-right">
+          <span class="foot-label">Contact</span>
+          <a href="mailto:hello@coppicestudios.com">hello@coppicestudios.com</a>
+          <a href="/privacy/">Privacy Statement</a>
+        </div>
+      </footer>
 
   </body>
   </html>
